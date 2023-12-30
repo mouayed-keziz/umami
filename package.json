@@ -27,7 +27,7 @@
     "build-db-client": "prisma generate",
     "update-tracker": "node scripts/update-tracker.js",
     "update-db": "prisma migrate deploy",
-    "check-db": "echo hello",
+    "check-db": "node scripts/check-db.js",
     "check-env": "node scripts/check-env.js",
     "copy-db-files": "node scripts/copy-db-files.js",
     "extract-messages": "formatjs extract \"src/{pages,components}/**/*.js\" --out-file build/messages.json",
@@ -42,7 +42,8 @@
     "change-password": "node scripts/change-password.js",
     "lint": "next lint --quiet",
     "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
-    "postbuild": "node scripts/postbuild.js"
+    "postbuild": "node scripts/postbuild.js",
+    "create-user": "node scripts/create-admin-user.js"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

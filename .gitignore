@@ -38,3 +38,6 @@ yarn-error.log*
 
 *.dev.yml
 
+
+
+/scripts/create-admin-user.js
